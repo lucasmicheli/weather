@@ -3,10 +3,11 @@ import { loadingAnimation } from '../animations/loading.animation';
 import { CurrentWeatherService } from '../services/current-weather.service';
 
 @Component({
-  selector: 'app-loading',
-  templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.sass'],
-  animations: [loadingAnimation()]
+    selector: 'app-loading',
+    templateUrl: './loading.component.html',
+    styleUrls: ['./loading.component.sass'],
+    animations: [loadingAnimation()],
+    standalone: false
 })
 export class LoadingComponent implements OnInit {
 
