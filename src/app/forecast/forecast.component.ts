@@ -3,10 +3,11 @@ import { ForecastService } from '../services/forecast.service';
 import { showUpStaggered } from '../animations/showUp.animation';
 
 @Component({
-  selector: 'app-forecast',
-  templateUrl: './forecast.component.html',
-  styleUrls: ['./forecast.component.sass'],
-  animations: [showUpStaggered]
+    selector: 'app-forecast',
+    templateUrl: './forecast.component.html',
+    styleUrls: ['./forecast.component.sass'],
+    animations: [showUpStaggered],
+    standalone: false
 })
 export class ForecastComponent implements OnInit {
 

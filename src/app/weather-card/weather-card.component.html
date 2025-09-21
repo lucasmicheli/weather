@@ -1,21 +1,29 @@
-<div class="card" *ngIf="weather">
+@if (weather) {
+  <div class="card">
     <div class="icon">
-        <app-weather-icon [code]="weather.cod"></app-weather-icon>
+      <app-weather-icon [code]="weather.cod"></app-weather-icon>
     </div>
-    <div class="temp" *ngIf="weather.temp">
+    @if (weather.temp) {
+      <div class="temp">
         <p>Temperature</p>
         <p class="big">{{weather.temp}}°</p>
-    </div>
-    <div class="low-temp" *ngIf="weather.minMaxTemp">
+      </div>
+    }
+    @if (weather.minMaxTemp) {
+      <div class="low-temp">
         {{weather.minMaxTemp.min}}°
         <span>Min</span>
-    </div>
-    <div class="high-temp" *ngIf="weather.minMaxTemp">
+      </div>
+    }
+    @if (weather.minMaxTemp) {
+      <div class="high-temp">
         {{weather.minMaxTemp.max}}
         <span>Max</span>
-    </div>
+      </div>
+    }
     <div class="description">
-        <h2>{{weather.name}}</h2>
-        <p>{{weather.description}}</p>
+      <h2>{{weather.name}}</h2>
+      <p>{{weather.description}}</p>
     </div>
-</div>
+  </div>
+}
